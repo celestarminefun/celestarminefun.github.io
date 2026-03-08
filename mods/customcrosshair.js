@@ -1,5 +1,5 @@
-
-const crosshairPresets = {
+    (function(){
+    const crosshairPresets = {
     "default": { label: "Default", style: { backgroundColor: "#fff", border: "2px solid #111010", borderRadius: "70.5px", width: 1, height: 1 } },
     "mc": {
         label: "Minecraft",
@@ -67,6 +67,7 @@ const crosshairPresets = {
     let settings = JSON.parse(localStorage.getItem("mf-crosshair-settings")) || defaultSettings;
     function saveSettings(){ localStorage.setItem("mf-crosshair-settings", JSON.stringify(settings)); }
 
+    const container = document.querySelector(".app") || document.body;
     const uiWrapper = document.createElement("div");
     uiWrapper.className = "mf-crosshair-ui";
     uiWrapper.innerHTML = `
@@ -91,16 +92,23 @@ const crosshairPresets = {
       </div>
     </div>
     `;
+    container.appendChild(uiWrapper);
 
-    const waitForKeystrokes = setInterval(()=>{
-        const ks = document.querySelector(".mf-keystrokes");
-        if(ks){
-            ks.appendChild(uiWrapper);
-            clearInterval(waitForKeystrokes);
-        } else if(!document.querySelector(".mf-crosshair-ui")) {
-            document.body.appendChild(uiWrapper);
-        }
-    }, 100);
+    const style = document.createElement("style");
+    style.textContent = `
+    .mf-crosshair-ui { font-family: Arial, sans-serif; user-select: none; z-index:999999; }
+    .mf-crosshair-settings { display: flex; flex-direction: column; gap: 1.5vh; background: rgba(20,20,20,0.95); padding: 2vh; border-radius: 1vh; min-width: 30vh; color: white; font-size: 1.5vh; }
+    .mf-crosshair-setting { display: flex; justify-content: space-between; align-items: center; gap: 1vh; }
+    .mf-crosshair-dropdown { position: relative; width: 15vh; cursor: pointer; }
+    .mf-crosshair-dropdown .selected { background: #222; padding: 0.5vh 1vh; border-radius: 0.5vh; border: 0.1vh solid #444; text-align: center; }
+    .mf-crosshair-dropdown .options {position: absolute;top: 100%;left: 0;right: 0;background: #222;border-radius: 0.5vh;border: 0.1vh solid #444;display: none;list-style: none;padding: 0;margin-top: 0.5vh;max-height: 20vh;overflow-y: auto;z-index: 1000;}
+    .mf-crosshair-dropdown .options li { padding: 0.5vh 1vh; transition: background 0.2s; cursor: pointer; }
+    .mf-crosshair-dropdown .options li:hover { background: #444; }
+    #mf-crosshair-custom-url { width: 100%; padding: 0.5vh; border-radius: 0.5vh; border: 0.1vh solid #444; background: #333; color: white; outline: none; }
+    input[type="range"]{ width:8vh; height:.6vh; -webkit-appearance:none; background:#333; border-radius:.4vh; outline:none; }
+    input[type="range"]::-webkit-slider-thumb{ -webkit-appearance:none; width:1.2vh; height:1.2vh; border-radius:50%; background:white; cursor:pointer; }
+    `;
+    document.head.appendChild(style);
 
     const crosshair = document.createElement("div");
     crosshair.className = "mf-crosshair";
@@ -142,7 +150,6 @@ const crosshairPresets = {
     }
     applyCrosshair();
     setInterval(applyCrosshair, 100);
-
     const dropdown = uiWrapper.querySelector(".mf-crosshair-dropdown");
     const selected = dropdown.querySelector(".selected");
     const options = dropdown.querySelector(".options");
@@ -175,3 +182,4 @@ const crosshairPresets = {
             e.preventDefault();
         }
     }, { capture:true });
+})();
