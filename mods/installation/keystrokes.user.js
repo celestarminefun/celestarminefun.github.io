@@ -10,7 +10,7 @@
     'use strict';
 
     const script = document.createElement('script');
-    script.src = 'https://celestarminefun.github.io/mods/keystrokes.user.js';
+    script.src = 'https://celestarminefun.github.io/mods/keystrokes.js';
     script.type = 'text/javascript';
     script.async = true;
 
