@@ -14,7 +14,6 @@ const crosshairPresets = {
     "spinning": { label: "Spinning", image: "https://media.discordapp.net/attachments/596103721520201768/596527529829990403/Webp.net-gifmaker_12.gif?ex=69ae300e&is=69acde8e&hm=546b90980d3ed839bc65f6dd5177dd19138aaddb637c8005d66e9f80ac09f964&=", style: { border: "none", borderRadius: "0", width: 60, height: 60 } },
 };
 
-// ===== Namespaced UI =====
 const crosshairUI = document.createElement("div");
 crosshairUI.className = "mf-crosshair-ui";
 crosshairUI.innerHTML = `
@@ -111,17 +110,16 @@ function applyCrosshair(){
 }
 setInterval(applyCrosshair, 100);
 
-// ===== Namespaced Menu Toggle =====
 let menuOpen = false;
 document.addEventListener("keydown", e => {
     if (["INPUT","TEXTAREA"].includes(document.activeElement.tagName)) return;
+
     if (e.code === "F8") {
         menuOpen = !menuOpen;
         crosshairUI.style.display = menuOpen ? "flex" : "none";
     }
 });
 
-// ===== Namespaced Dropdown & Inputs =====
 const crosshairDropdown = crosshairUI.querySelector(".mf-crosshair-dropdown");
 const crosshairSelected = crosshairDropdown.querySelector(".selected");
 const crosshairOptions = crosshairDropdown.querySelector(".options");
