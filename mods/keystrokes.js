@@ -199,12 +199,12 @@ outline:none;
 }
 
 input[type="range"]::-webkit-slider-thumb{
-appearance:none;
-width:1.2vh;
-height:1.2vh;
-border-radius:50%;
-background:var(--mf-slider,#fff);
-cursor:pointer;
+  appearance: none;
+  width: 1.2vh;
+  height: 1.2vh;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
 }
 
 input[type="checkbox"]{
