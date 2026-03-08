@@ -143,7 +143,7 @@ setInterval(applyCrosshair, 100);
 let menuOpen=false;
 const menu = document.querySelector(".mf-crosshair-settings");
 document.addEventListener("keydown", e=>{
-    if(e.code==="F6"){
+    if(e.code==="F8"){
         menuOpen=!menuOpen;
         menu.style.display = menuOpen?"flex":"none";
     }
