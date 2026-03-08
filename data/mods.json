@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Keystrokes",
+    "description": "Displays when certain keys are pressed. F4 to change settings",
+    "tag": "ui",
+    "download": "https://celestarminefun.github.io/mods/installation/keystrokes.user.js"
+  },
+  {
+    "title": "Custom Crosshair",
+    "description": "Changes your in-game crosshair. F8 to change settings.",
+    "tag": "ui",
+    "download": "https://celestarminefun.github.io/mods/installation/customcrosshair.user.js"
+  },
+  {
+    "title": "Zoom",
+    "description": "Press V to zoom in",
+    "tag": "ui",
+    "download": "https://celestarminefun.github.io/mods/installation/zoom.user.js"
+  }
+]
