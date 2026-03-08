@@ -1,6 +1,3 @@
-(function(){
-'use strict';
-
 const ui=document.createElement("div");
 ui.className="mf-keystrokes";
 
@@ -512,5 +509,3 @@ requestAnimationFrame(cpsLoop);
 }
 
 cpsLoop();
-
-})();
