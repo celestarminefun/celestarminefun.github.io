@@ -93,12 +93,9 @@ style.textContent = `
     overflow-y: auto;
     z-index: 1000;
 
-    /* Nice scrollbar */
-    scrollbar-width: thin;           /* Firefox */
-    scrollbar-color: #888 #222;      /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #888 #222;
 }
-
-/* Chrome, Edge, Safari */
 .mf-crosshair-dropdown .options::-webkit-scrollbar {
     width: 0.8vh;
 }
@@ -168,13 +165,11 @@ function applyCrosshairTo(aim){
         aim.style.height = `${preset.style.height * settings.size}px`;
     }
 }
-
 function applyCrosshair(){
     const aim = document.querySelector('.aim[data-v-11a4d221]');
     if(aim) applyCrosshairTo(aim);
 }
 setInterval(applyCrosshair, 100);
-
 
 let menuOpen=false;
 const menu = document.querySelector(".mf-crosshair-settings");
@@ -228,5 +223,4 @@ if(settings.preset==="custom") customWrapper.style.display="flex";
 customInput.value = settings.customURL;
 selected.textContent = settings.preset==="custom" ? "Custom" : crosshairPresets[settings.preset].label;
 
-})();
 })();
