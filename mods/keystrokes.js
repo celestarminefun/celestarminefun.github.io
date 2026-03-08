@@ -27,6 +27,43 @@ ui.innerHTML=`
 <input type="checkbox" id="mf-cps">
 </div>
 
+<!-- NEW SETTINGS START -->
+<div class="mf-setting toggle">
+<label>Border</label>
+<input type="checkbox" id="mf-border">
+</div>
+
+<div class="mf-setting">
+<label>Border Thickness</label>
+<input type="range" id="mf-border-thickness" min="0" max="0.4" step="0.02">
+</div>
+
+<div class="mf-setting">
+  <label>Border Colour</label>
+  <input type="text" id="mf-border-colour" placeholder="#ffffff">
+</div>
+
+<div class="mf-setting">
+  <label>Pressed BG Colour</label>
+  <input type="text" id="mf-pressed-bg" placeholder="#ffffff">
+</div>
+
+<div class="mf-setting">
+  <label>Pressed Text Colour</label>
+  <input type="text" id="mf-pressed-text" placeholder="#000000">
+</div>
+
+<div class="mf-setting toggle">
+<label>Box Shadow</label>
+<input type="checkbox" id="mf-shadow">
+</div>
+
+<div class="mf-setting toggle">
+<label>Arrow Keys</label>
+<input type="checkbox" id="mf-arrows">
+</div>
+<!-- NEW SETTINGS END -->
+
 <div class="mf-setting">
 <label id="shift-label">Key: SHIFT</label>
 <button id="rebind-shift">Change</button>
@@ -108,11 +145,13 @@ font-size:1.3vh;
 color:white;
 transition:.05s;
 line-height:1.1;
+border:var(--mf-border,0vh solid transparent);
+box-shadow:var(--mf-shadow,0 0 .8vh rgba(0,0,0,.4));
 }
 
 .mf-keystrokes .key.active{
-background:white !important;
-color:black !important;
+background:var(--mf-pressed-bg,#fff) !important;
+color:var(--mf-pressed-text,#000) !important;
 }
 
 .mf-keystrokes .key.wide{
@@ -152,59 +191,6 @@ color:white;
 gap:.5vh;
 }
 
-.custom-dropdown {
-  position: relative;
-  width: 16vh;
-  font-size: 1.2vh;
-  color: white;
-  user-select: none;
-  cursor: pointer;
-}
-
-.custom-dropdown .selected {
-  background: #222;
-  padding: 0.3vh 0.6vh; 
-  width: 3vw;
-  margin-left: 2.05vw;
-  border-radius: 0.4vh;
-  border: 0.1vh solid #444;
-  font-size: 1.1vh;
-  cursor: pointer;
-  text-align: center;
-}
-
-.custom-dropdown .options {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  width: 3.5vw;
-  margin-left: 2.05vw;
-  background: #222;
-  border-radius: 0.4vh;
-  border: 0.1vh solid #444;
-  margin-top: 0.3vh;
-  list-style: none;
-  padding: 0;
-  display: none;
-  max-height: 20vh;
-  overflow-y: auto;
-  z-index: 1000;
-}
-
-.custom-dropdown .options li {
-  padding: 0.5vh 0.8vh;
-  transition: background 0.2s;
-}
-
-.custom-dropdown .options li:hover {
-  background: #444;
-}
-
-.mf-setting > .custom-dropdown {
-    margin-left: auto;
-}
-
 input[type="range"]{
 width:8vh;
 height:.6vh;
@@ -219,8 +205,25 @@ appearance:none;
 width:1.2vh;
 height:1.2vh;
 border-radius:50%;
-background:white;
+background:var(--mf-slider,#fff);
 cursor:pointer;
+}
+
+input[type="checkbox"]{
+appearance:none;
+width:1.6vh;
+height:1.6vh;
+border-radius:.3vh;
+background:black;
+border:.15vh solid #444;
+cursor:pointer;
+transition: .2s
+}
+
+input[type="checkbox"]:checked{
+background:#bc8fff;
+border-color:#bc8fff;
+transition: .2s
 }
 
 button{
@@ -239,9 +242,83 @@ button:hover{
 background:#333;
 }
 
+.mf-settings input[type="text"] {
+    width: 2.5vw;
+    height: 1.8vh;
+    padding: 0.2vh 0.4vh;
+    border-radius: 0.4vh;
+    border: 0.1vh solid #555;
+    background: #222;
+    color: white;
+    outline: none;
+    font-size: 1.1vh;
+    text-align: center;
+    transition: border 0.15s, background 0.15s;
+}
+
+.mf-settings input[type="text"]:focus {
+    background: #333;
+}
+
+/* ================= Fixed Dropdown CSS ================= */
+/* Keep dropdown small and aligned */
+.custom-dropdown {
+    position: relative;
+    width: 3vw; /* small width like your selected box */
+    cursor: pointer;
+    user-select: none;
+}
+
+.custom-dropdown .selected {
+    background: #222;
+    color: white;
+    padding: 0.4vh 0.6vh;
+    border-radius: 0.4vh;
+    border: 0.1vh solid #444;
+    font-size: 1.1vh;
+    width: 100%; /* fill parent width */
+    box-sizing: border-box;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.custom-dropdown .options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%; /* match selected box width */
+    background: #222;
+    border: 0.1vh solid #444;
+    border-radius: 0.4vh;
+    margin-top: 0.2vh;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+    box-sizing: border-box;
+    text-align: center; /* center the text */
+}
+
+.custom-dropdown .options li {
+    list-style: none;
+    padding: 0.4vh 0.2vh; /* smaller padding to fit text */
+    font-size: 1.1vh;
+    color: white;
+    margin-left: -2.6vw;
+    transition: background 0.15s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+.custom-dropdown .options li:hover {
+    background: #333;
+}
+
 .mf-keystrokes[mf-theme="rainbow"] .key {
   animation: rainbowcycle 9s linear infinite;
-  box-shadow:0 0 .8vh rgba(0,0,0,.4);
 }
 
 @keyframes rainbowcycle {
@@ -259,7 +336,6 @@ background:#333;
 background:linear-gradient(270deg,#ff00de,#00beff,#ff00de);
 background-size:400% 400%;
 animation:rgbmove 12s linear infinite;
-box-shadow:0 0 .8vh rgba(0,0,0,.4);
 }
 
 @keyframes rgbmove {
@@ -276,22 +352,59 @@ y:2,
 size:1,
 theme:"default",
 showCPS:true,
+border:true,
+borderThickness:0.1,
+borderColour:"#ffffff",
+pressedBG:"#ffffff",
+pressedText:"#000000",
+shadow:true,
+arrows:false,
 keys:{shift:"ShiftLeft",crouch:"KeyC"}
 };
 
-let settings=JSON.parse(localStorage.getItem("mf-keystrokes-settings"))||defaultSettings;
+let settings = Object.assign({}, defaultSettings, JSON.parse(localStorage.getItem("mf-keystrokes-settings") || "{}"));
 
 function save(){
 localStorage.setItem("mf-keystrokes-settings",JSON.stringify(settings));
 }
 
 function apply(){
-
 ui.style.left=settings.x+"vw";
 ui.style.bottom=settings.y+"vh";
 ui.style.transform=`scale(${settings.size})`;
 
 ui.setAttribute("mf-theme", settings.theme);
+
+document.documentElement.style.setProperty(
+    "--mf-border",
+    settings.border ? settings.borderThickness + "vh solid " + settings.borderColour : "0vh solid transparent"
+);
+
+document.documentElement.style.setProperty("--mf-pressed-bg", settings.pressedBG);
+document.documentElement.style.setProperty("--mf-pressed-text", settings.pressedText);
+document.documentElement.style.setProperty(
+    "--mf-shadow",
+    settings.shadow ? "0 0 .8vh rgba(0,0,0,.4)" : "none"
+);
+document.documentElement.style.setProperty(
+  "--mf-border",
+  settings.border ? settings.borderThickness+"vh solid "+settings.borderColour : "0vh solid transparent"
+);
+document.documentElement.style.setProperty(
+  "--mf-slider",
+  settings.borderColour
+);
+if(settings.arrows){
+document.querySelector('[data-key="KeyW"]').textContent="↑";
+document.querySelector('[data-key="KeyA"]').textContent="←";
+document.querySelector('[data-key="KeyS"]').textContent="↓";
+document.querySelector('[data-key="KeyD"]').textContent="→";
+}else{
+document.querySelector('[data-key="KeyW"]').textContent="W";
+document.querySelector('[data-key="KeyA"]').textContent="A";
+document.querySelector('[data-key="KeyS"]').textContent="S";
+document.querySelector('[data-key="KeyD"]').textContent="D";
+}
 
 document.querySelectorAll(".cps-value").forEach(e=>{
 e.style.display=settings.showCPS?"block":"none";
@@ -303,20 +416,82 @@ customDropdown.querySelector(".selected").textContent = settings.theme.charAt(0)
 
 apply();
 
+const size=document.getElementById("mf-size");
+const cps=document.getElementById("mf-cps");
+
+const border=document.getElementById("mf-border");
+const borderThickness=document.getElementById("mf-border-thickness");
+const borderColour = document.getElementById("mf-border-colour");
+const pressedBG = document.getElementById("mf-pressed-bg");
+const pressedText = document.getElementById("mf-pressed-text");
+const shadow=document.getElementById("mf-shadow");
+const arrows=document.getElementById("mf-arrows");
+
+size.value=settings.size;
+cps.checked=settings.showCPS;
+border.checked=settings.border;
+borderThickness.value=settings.borderThickness;
+borderColour.value = settings.borderColour || "#ffffff";
+pressedBG.value = settings.pressedBG || "#ffffff";
+pressedText.value = settings.pressedText || "#000000";
+shadow.checked=settings.shadow;
+arrows.checked=settings.arrows;
+
+size.addEventListener("input",e=>{
+settings.size=parseFloat(e.target.value);
+apply();
+});
+cps.onchange=e=>{
+settings.showCPS=e.target.checked;
+apply();
+};
+border.onchange=e=>{
+settings.border=e.target.checked;
+apply();
+};
+borderThickness.addEventListener("input",e=>{
+settings.borderThickness=parseFloat(e.target.value);
+apply();
+});
+borderColour.onchange = e => {
+    settings.borderColour = e.target.value || "#ffffff";
+    apply();
+    save();
+};
+
+pressedBG.onchange = e => {
+    settings.pressedBG = e.target.value || "#ffffff";
+    apply();
+    save();
+};
+
+pressedText.onchange = e => {
+    settings.pressedText = e.target.value || "#000000";
+    apply();
+    save();
+};
+shadow.onchange=e=>{
+settings.shadow=e.target.checked;
+apply();
+};
+arrows.onchange=e=>{
+settings.arrows=e.target.checked;
+apply();
+};
+
 const customDropdown = document.querySelector(".custom-dropdown");
 const selected = customDropdown.querySelector(".selected");
 const options = customDropdown.querySelector(".options");
 
-selected.addEventListener("click", e => {
+selected.addEventListener("click", () => {
     options.style.display = options.style.display === "block" ? "none" : "block";
 });
 
 options.querySelectorAll("li").forEach(li => {
-    li.addEventListener("click", e => {
-        const value = li.dataset.value;
+    li.addEventListener("click", () => {
+        settings.theme = li.dataset.value;
         selected.textContent = li.textContent;
         options.style.display = "none";
-        settings.theme = value;
         apply();
         save();
     });
@@ -327,9 +502,6 @@ document.addEventListener("click", e => {
         options.style.display = "none";
     }
 });
-
-const size=document.getElementById("mf-size");
-const cps=document.getElementById("mf-cps");
 
 size.value=settings.size;
 cps.checked=settings.showCPS;
