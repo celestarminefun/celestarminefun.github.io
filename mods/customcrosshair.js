@@ -62,9 +62,9 @@ const crosshairPresets = {
     },
 };
 
-const ui = document.createElement("div");
-ui.className = "mf-crosshair-ui";
-ui.innerHTML = `
+const crosshairUI = document.createElement("div");
+crosshairUI.className = "mf-crosshair-ui";
+crosshairUI.innerHTML = `
 <div class="mf-crosshair-settings">
   <div class="mf-crosshair-setting">
     <label>Crosshair Preset</label>
@@ -86,7 +86,7 @@ ui.innerHTML = `
   </div>
 </div>
 `;
-document.body.appendChild(ui);
+document.body.appendChild(crosshairUI);
 
 const style = document.createElement("style");
 style.textContent = `
@@ -95,11 +95,10 @@ style.textContent = `
 .mf-crosshair-setting { display: flex; justify-content: space-between; align-items: center; gap: 1vh; }
 .mf-crosshair-dropdown { position: relative; width: 15vh; cursor: pointer; }
 .mf-crosshair-dropdown .selected { background: #222; padding: 0.5vh 1vh; border-radius: 0.5vh; border: 0.1vh solid #444; text-align: center; }
-.mf-crosshair-dropdown .options {position: absolute;top: 100%;left: 0;right: 0;background: #222;border-radius: 0.5vh;border: 0.1vh solid #444;display: none;list-style: none;padding: 0;margin-top: 0.5vh;max-height: 20vh;overflow-y: auto;z-index: 1000;scrollbar-width: thin;scrollbar-color: #888 #222;}
+.mf-crosshair-dropdown .options {position: absolute;top: 100%;left: 0;right: 0;background: #222;border-radius: 0.5vh;border: 0.1vh solid #444;display: none;list-style: none;padding: 0;margin-top: 0.5vh;max-height: 20vh;overflow-y: auto;z-index: 1000;}
 .mf-crosshair-dropdown .options::-webkit-scrollbar {width: 0.8vh;}
 .mf-crosshair-dropdown .options::-webkit-scrollbar-track {background: #222;border-radius: 0.5vh;}
 .mf-crosshair-dropdown .options::-webkit-scrollbar-thumb {background-color: #888;border-radius: 1vh;border: 0.2vh solid #222;}
-.mf-crosshair-dropdown .options::-webkit-scrollbar-thumb:hover {background-color: #aaa;}
 .mf-crosshair-dropdown .options li { padding: 0.5vh 1vh; transition: background 0.2s; }
 .mf-crosshair-dropdown .options li:hover { background: #444; }
 #mf-crosshair-custom-url { width: 100%; padding: 0.5vh; border-radius: 0.5vh; border: 0.1vh solid #444; background: #333; color: white; outline: none; }
@@ -111,7 +110,7 @@ document.head.appendChild(style);
 const defaultSettings = { preset: "default", customURL: "", size: 1 };
 let settings = JSON.parse(localStorage.getItem("mf-crosshair-settings")) || defaultSettings;
 
-function save(){ localStorage.setItem("mf-crosshair-settings",JSON.stringify(settings)); }
+function saveSettings(){ localStorage.setItem("mf-crosshair-settings", JSON.stringify(settings)); }
 
 function applyCrosshairTo(aim){
     if(!aim) return;
@@ -152,30 +151,23 @@ function applyCrosshairTo(aim){
     }
 }
 
-function applyCrosshair(){
+setInterval(()=>{
     const aim = document.querySelector('.aim[data-v-11a4d221]');
     if(aim) applyCrosshairTo(aim);
-}
-setInterval(applyCrosshair, 100);
+}, 100);
 
-let menuOpen=false;
+let menuOpen = false;
 const menu = document.querySelector(".mf-crosshair-settings");
-setTimeout(() => {
-    let menuOpen = false;
-    const menu = document.querySelector(".mf-crosshair-settings");
+window.addEventListener("keydown", e => {
+    if (["INPUT","TEXTAREA"].includes(document.activeElement.tagName)) return;
+    if (e.code === "F8"){
+        menuOpen = !menuOpen;
+        menu.style.display = menuOpen ? "flex" : "none";
+        e.stopImmediatePropagation();
+        e.preventDefault();
+    }
+}, { capture: true });
 
-    window.addEventListener("keydown", e => {
-        if (["INPUT","TEXTAREA"].includes(document.activeElement.tagName)) return;
-
-        if (e.code === "F8") {
-            menuOpen = !menuOpen;
-            menu.style.display = menuOpen ? "flex" : "none";
-            
-            e.stopImmediatePropagation();
-            e.preventDefault();
-        }
-    }, { capture: true });
-}, 500); 
 const dropdown = document.querySelector(".mf-crosshair-dropdown");
 const selected = dropdown.querySelector(".selected");
 const options = dropdown.querySelector(".options");
@@ -183,7 +175,6 @@ const customWrapper = document.getElementById("mf-crosshair-custom-url-wrapper")
 const customInput = document.getElementById("mf-crosshair-custom-url");
 
 selected.addEventListener("click", ()=>{ options.style.display = options.style.display==="block"?"none":"block"; });
-
 options.querySelectorAll("li").forEach(li=>{
     li.addEventListener("click", ()=>{
         const val = li.dataset.value;
@@ -191,28 +182,20 @@ options.querySelectorAll("li").forEach(li=>{
         options.style.display = "none";
         settings.preset = val;
         customWrapper.style.display = val==="custom"?"flex":"none";
-        applyCrosshair();
-        save();
+        saveSettings();
     });
-});
-
-document.addEventListener("click", e=>{
-    if(!dropdown.contains(e.target)) options.style.display="none";
 });
 
 customInput.addEventListener("change", ()=>{
     settings.customURL = customInput.value.trim();
-    applyCrosshair();
-    save();
+    saveSettings();
 });
 
 const sizeSlider = document.getElementById("mf-crosshair-size");
 sizeSlider.value = settings.size;
-
 sizeSlider.addEventListener("input", ()=>{
     settings.size = parseFloat(sizeSlider.value);
-    applyCrosshair();
-    save();
+    saveSettings();
 });
 
 if(settings.preset==="custom") customWrapper.style.display="flex";
