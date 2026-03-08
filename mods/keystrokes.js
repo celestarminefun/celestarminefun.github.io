@@ -27,7 +27,6 @@ ui.innerHTML=`
 <input type="checkbox" id="mf-cps">
 </div>
 
-<!-- NEW SETTINGS START -->
 <div class="mf-setting toggle">
 <label>Border</label>
 <input type="checkbox" id="mf-border">
@@ -62,7 +61,6 @@ ui.innerHTML=`
 <label>Arrow Keys</label>
 <input type="checkbox" id="mf-arrows">
 </div>
-<!-- NEW SETTINGS END -->
 
 <div class="mf-setting">
 <label id="shift-label">Key: SHIFT</label>
@@ -351,13 +349,13 @@ x:1,
 y:2,
 size:1,
 theme:"default",
-showCPS:true,
-border:true,
+showCPS:false,
+border:false,
 borderThickness:0.1,
 borderColour:"#ffffff",
 pressedBG:"#ffffff",
 pressedText:"#000000",
-shadow:true,
+shadow:false,
 arrows:false,
 keys:{shift:"ShiftLeft",crouch:"KeyC"}
 };
