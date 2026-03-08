@@ -1,70 +1,23 @@
 const crosshairPresets = {
     "default": { label: "Default", style: { backgroundColor: "#fff", border: "2px solid #111010", borderRadius: "70.5px", width: 1, height: 1 } },
-    "mc": {
-        label: "Minecraft",
-        image: "https://media.discordapp.net/attachments/1471854668559683735/1480054794608709773/mccrosshair.png?ex=69ae47f1&is=69acf671&hm=620f4fc609c7f68a04812d4b377cf938b81131a8aa344864a6fd0838acd4162b&=&format=webp&quality=lossless",
-        style: { border: "none", borderRadius: "0", width: 16, height: 16 }
-    },
-    "greencircle": {
-        label: "Green Circle",
-        image: "https://images-ext-1.discordapp.net/external/i2QGlfURY5GvvezRPxSx5xAQVa3iw9WNjNtD9sLVW4w/https/i.imgur.com/FEK3Eyc.png?format=webp&quality=lossless",
-        style: { border: "none", borderRadius: "0", width: 16, height: 16 }
-    },
-    "diamond": {
-        label: "Diamond",
-        image: "https://media.discordapp.net/attachments/1353514861526646825/1353514861811863572/image.png?ex=69ae09f2&is=69acb872&hm=2eb8fa17fa8e082515c1f37bfad3e2f38471c0f4265d92fe585a7e1c6ff31df7&=&format=webp&quality=lossless",
-        style: { border: "none", borderRadius: "0", width: 48, height: 48 }
-    },
-    "okay": {
-        label: "Okay",
-        image: "https://media.discordapp.net/attachments/856723935357173780/1069994777057185822/image.png?ex=69ae370a&is=69ace58a&hm=d1e128d5016591391a83d23daba9e1fc0363df2d82987e852f16bc06077f316f&=&format=webp&quality=lossless",
-        style: { border: "none", borderRadius: "0", width: 48, height: 48 }
-    },
-    "anya": {
-        label: "Anya",
-        image: "https://media.discordapp.net/attachments/856723935357173780/1108462921710845972/image.png?ex=69adc18a&is=69ac700a&hm=a7279f09e5f1545eafc9d15a71204a2aca6ff92bf699414cb3d5a204ffa58b66&=&format=webp&quality=lossless",
-        style: { border: "none", borderRadius: "0", width: 48, height: 48 }
-    },
-    "sakura": {
-        label: "Sakura",
-        image: "https://media.discordapp.net/attachments/856723935357173780/1103790854365249536/image.png?ex=69ade5d7&is=69ac9457&hm=99c713556243d9db8929e28079c9dd7dd4c473ded0bf5fbf2740f75d8f64aec2&=&format=webp&quality=lossless",
-        style: { border: "none", borderRadius: "0", width: 48, height: 48 }
-    },
-    "blueheart": {
-        label: "Blue Heart",
-        image: "https://media.discordapp.net/attachments/856723935357173780/1020656980949467157/image.png?ex=69ae05a3&is=69acb423&hm=892605e375dc8051d511d04aad2d956b52043b675336772dfe479f717889e9b5&=&format=webp&quality=lossless",
-        style: { border: "none", borderRadius: "0", width: 16, height: 16 }
-    },
-    "X": {
-        label: "X",
-        image: "https://media.discordapp.net/attachments/856723935357173780/941739759791931463/image.png?ex=69ae533f&is=69ad01bf&hm=36187f98c2a01fcea0af8c4df9e5d206d7a68ee564e44511965c065c6a98083a&=&format=webp&quality=lossless",
-        style: { border: "none", borderRadius: "0", width: 60, height: 60 }
-    },
-    "ben10": {
-        label: "Ben 10",
-        image: "https://media.discordapp.net/attachments/856723935357173780/936156953938386984/image.png?ex=69adca5a&is=69ac78da&hm=6066611728e833006ff5d65cf3edcc2645d6efef7ac9c52a1e29040445170c7a&=&format=webp&quality=lossless",
-        style: { border: "none", borderRadius: "0", width: 48, height: 48 }
-    },
-    "triangle": {
-        label: "Triangle",
-        image: "https://media.discordapp.net/attachments/901185531185074217/902247225592270928/Guest1917_neon_scifi.png?ex=69adb1b5&is=69ac6035&hm=0c53407ce6437aa88525f23f5454c55f0e8b05599c30ffa47bad7438bf51362e&=&format=webp&quality=lossless",
-        style: { border: "none", borderRadius: "0", width: 48, height: 48 }
-    },
-    "rainbow": {
-        label: "Rainbow",
-        image: "https://media.discordapp.net/attachments/614536835984785434/846192895395495956/rainbow.gif?ex=69ae1d8b&is=69accc0b&hm=4f0e58973d903c7ea16c3f6bcbef11929676daa5f08c40b4874a4a9b0cecce22&=",
-        style: { border: "none", borderRadius: "0", width: 48, height: 48 }
-    },
-    "spinning": {
-        label: "Spinning",
-        image: "https://media.discordapp.net/attachments/596103721520201768/596527529829990403/Webp.net-gifmaker_12.gif?ex=69ae300e&is=69acde8e&hm=546b90980d3ed839bc65f6dd5177dd19138aaddb637c8005d66e9f80ac09f964&=",
-        style: { border: "none", borderRadius: "0", width: 60, height: 60 }
-    },
+    "mc": { label: "Minecraft", image: "https://media.discordapp.net/attachments/1471854668559683735/1480054794608709773/mccrosshair.png?ex=69ae47f1&is=69acf671&hm=620f4fc609c7f68a04812d4b377cf938b81131a8aa344864a6fd0838acd4162b&=&format=webp&quality=lossless", style: { border: "none", borderRadius: "0", width: 16, height: 16 } },
+    "greencircle": { label: "Green Circle", image: "https://images-ext-1.discordapp.net/external/i2QGlfURY5GvvezRPxSx5xAQVa3iw9WNjNtD9sLVW4w/https/i.imgur.com/FEK3Eyc.png?format=webp&quality=lossless", style: { border: "none", borderRadius: "0", width: 16, height: 16 } },
+    "diamond": { label: "Diamond", image: "https://media.discordapp.net/attachments/1353514861526646825/1353514861811863572/image.png?ex=69ae09f2&is=69acb872&hm=2eb8fa17fa8e082515c1f37bfad3e2f38471c0f4265d92fe585a7e1c6ff31df7&=&format=webp&quality=lossless", style: { border: "none", borderRadius: "0", width: 48, height: 48 } },
+    "okay": { label: "Okay", image: "https://media.discordapp.net/attachments/856723935357173780/1069994777057185822/image.png?ex=69ae370a&is=69ace58a&hm=d1e128d5016591391a83d23daba9e1fc0363df2d82987e852f16bc06077f316f&=&format=webp&quality=lossless", style: { border: "none", borderRadius: "0", width: 48, height: 48 } },
+    "anya": { label: "Anya", image: "https://media.discordapp.net/attachments/856723935357173780/1108462921710845972/image.png?ex=69adc18a&is=69ac700a&hm=a7279f09e5f1545eafc9d15a71204a2aca6ff92bf699414cb3d5a204ffa58b66&=&format=webp&quality=lossless", style: { border: "none", borderRadius: "0", width: 48, height: 48 } },
+    "sakura": { label: "Sakura", image: "https://media.discordapp.net/attachments/856723935357173780/1103790854365249536/image.png?ex=69ade5d7&is=69ac9457&hm=99c713556243d9db8929e28079c9dd7dd4c473ded0bf5fbf2740f75d8f64aec2&=&format=webp&quality=lossless", style: { border: "none", borderRadius: "0", width: 48, height: 48 } },
+    "blueheart": { label: "Blue Heart", image: "https://media.discordapp.net/attachments/856723935357173780/1020656980949467157/image.png?ex=69ae05a3&is=69acb423&hm=892605e375dc8051d511d04aad2d956b52043b675336772dfe479f717889e9b5&=&format=webp&quality=lossless", style: { border: "none", borderRadius: "0", width: 16, height: 16 } },
+    "X": { label: "X", image: "https://media.discordapp.net/attachments/856723935357173780/941739759791931463/image.png?ex=69ae533f&is=69ad01bf&hm=36187f98c2a01fcea0af8c4df9e5d206d7a68ee564e44511965c065c6a98083a&=&format=webp&quality=lossless", style: { border: "none", borderRadius: "0", width: 60, height: 60 } },
+    "ben10": { label: "Ben 10", image: "https://media.discordapp.net/attachments/856723935357173780/936156953938386984/image.png?ex=69adca5a&is=69ac78da&hm=6066611728e833006ff5d65cf3edcc2645d6efef7ac9c52a1e29040445170c7a&=&format=webp&quality=lossless", style: { border: "none", borderRadius: "0", width: 48, height: 48 } },
+    "triangle": { label: "Triangle", image: "https://media.discordapp.net/attachments/901185531185074217/902247225592270928/Guest1917_neon_scifi.png?ex=69adb1b5&is=69ac6035&hm=0c53407ce6437aa88525f23f5454c55f0e8b05599c30ffa47bad7438bf51362e&=&format=webp&quality=lossless", style: { border: "none", borderRadius: "0", width: 48, height: 48 } },
+    "rainbow": { label: "Rainbow", image: "https://media.discordapp.net/attachments/614536835984785434/846192895395495956/rainbow.gif?ex=69ae1d8b&is=69accc0b&hm=4f0e58973d903c7ea16c3f6bcbef11929676daa5f08c40b4874a4a9b0cecce22&=", style: { border: "none", borderRadius: "0", width: 48, height: 48 } },
+    "spinning": { label: "Spinning", image: "https://media.discordapp.net/attachments/596103721520201768/596527529829990403/Webp.net-gifmaker_12.gif?ex=69ae300e&is=69acde8e&hm=546b90980d3ed839bc65f6dd5177dd19138aaddb637c8005d66e9f80ac09f964&=", style: { border: "none", borderRadius: "0", width: 60, height: 60 } },
 };
 
-const ui = document.createElement("div");
-ui.className = "mf-crosshair-ui";
-ui.innerHTML = `
+// ===== Namespaced UI =====
+const crosshairUI = document.createElement("div");
+crosshairUI.className = "mf-crosshair-ui";
+crosshairUI.innerHTML = `
 <div class="mf-crosshair-settings">
   <div class="mf-crosshair-setting">
     <label>Crosshair Preset</label>
@@ -86,10 +39,10 @@ ui.innerHTML = `
   </div>
 </div>
 `;
-document.body.appendChild(ui);
+document.body.appendChild(crosshairUI);
 
-const style = document.createElement("style");
-style.textContent = `
+const crosshairStyle = document.createElement("style");
+crosshairStyle.textContent = `
 .mf-crosshair-ui { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 999999; font-family: Arial, sans-serif; user-select: none; }
 .mf-crosshair-settings { display: none; flex-direction: column; gap: 1.5vh; background: rgba(20,20,20,0.95); padding: 2vh; border-radius: 1vh; min-width: 30vh; color: white; font-size: 1.5vh; }
 .mf-crosshair-setting { display: flex; justify-content: space-between; align-items: center; gap: 1vh; }
@@ -106,7 +59,7 @@ style.textContent = `
 input[type="range"]{ width:8vh; height:.6vh; -webkit-appearance:none; background:#333; border-radius:.4vh; outline:none; }
 input[type="range"]::-webkit-slider-thumb{ -webkit-appearance:none; width:1.2vh; height:1.2vh; border-radius:50%; background:white; cursor:pointer; }
 `;
-document.head.appendChild(style);
+document.head.appendChild(crosshairStyle);
 
 const defaultSettings = { preset: "default", customURL: "", size: 1 };
 let settings = JSON.parse(localStorage.getItem("mf-crosshair-settings")) || defaultSettings;
@@ -158,55 +111,57 @@ function applyCrosshair(){
 }
 setInterval(applyCrosshair, 100);
 
-let menuOpen=false;
+// ===== Namespaced Menu Toggle =====
+let menuOpen = false;
 document.addEventListener("keydown", e => {
     if (["INPUT","TEXTAREA"].includes(document.activeElement.tagName)) return;
-
     if (e.code === "F8") {
         menuOpen = !menuOpen;
-        menu.style.display = menuOpen ? "flex" : "none";
+        crosshairUI.style.display = menuOpen ? "flex" : "none";
     }
 });
 
-const dropdown = document.querySelector(".mf-crosshair-dropdown");
-const selected = dropdown.querySelector(".selected");
-const options = dropdown.querySelector(".options");
-const customWrapper = document.getElementById("mf-crosshair-custom-url-wrapper");
-const customInput = document.getElementById("mf-crosshair-custom-url");
+// ===== Namespaced Dropdown & Inputs =====
+const crosshairDropdown = crosshairUI.querySelector(".mf-crosshair-dropdown");
+const crosshairSelected = crosshairDropdown.querySelector(".selected");
+const crosshairOptions = crosshairDropdown.querySelector(".options");
+const crosshairCustomWrapper = crosshairUI.querySelector("#mf-crosshair-custom-url-wrapper");
+const crosshairCustomInput = crosshairUI.querySelector("#mf-crosshair-custom-url");
+const crosshairSizeSlider = crosshairUI.querySelector("#mf-crosshair-size");
 
-selected.addEventListener("click", ()=>{ options.style.display = options.style.display==="block"?"none":"block"; });
+crosshairSelected.addEventListener("click", ()=>{ 
+    crosshairOptions.style.display = crosshairOptions.style.display==="block"?"none":"block"; 
+});
 
-options.querySelectorAll("li").forEach(li=>{
+crosshairOptions.querySelectorAll("li").forEach(li=>{
     li.addEventListener("click", ()=>{
         const val = li.dataset.value;
-        selected.textContent = li.textContent;
-        options.style.display = "none";
+        crosshairSelected.textContent = li.textContent;
+        crosshairOptions.style.display = "none";
         settings.preset = val;
-        customWrapper.style.display = val==="custom"?"flex":"none";
+        crosshairCustomWrapper.style.display = val==="custom"?"flex":"none";
         applyCrosshair();
         save();
     });
 });
 
 document.addEventListener("click", e=>{
-    if(!dropdown.contains(e.target)) options.style.display="none";
+    if(!crosshairDropdown.contains(e.target)) crosshairOptions.style.display="none";
 });
 
-customInput.addEventListener("change", ()=>{
-    settings.customURL = customInput.value.trim();
+crosshairCustomInput.addEventListener("change", ()=>{
+    settings.customURL = crosshairCustomInput.value.trim();
     applyCrosshair();
     save();
 });
 
-const sizeSlider = document.getElementById("mf-crosshair-size");
-sizeSlider.value = settings.size;
-
-sizeSlider.addEventListener("input", ()=>{
-    settings.size = parseFloat(sizeSlider.value);
+crosshairSizeSlider.value = settings.size;
+crosshairSizeSlider.addEventListener("input", ()=>{
+    settings.size = parseFloat(crosshairSizeSlider.value);
     applyCrosshair();
     save();
 });
 
-if(settings.preset==="custom") customWrapper.style.display="flex";
-customInput.value = settings.customURL;
-selected.textContent = settings.preset==="custom" ? "Custom" : crosshairPresets[settings.preset].label;
+if(settings.preset==="custom") crosshairCustomWrapper.style.display="flex";
+crosshairCustomInput.value = settings.customURL;
+crosshairSelected.textContent = settings.preset==="custom" ? "Custom" : crosshairPresets[settings.preset].label;
