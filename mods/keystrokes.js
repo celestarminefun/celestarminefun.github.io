@@ -517,12 +517,14 @@ apply();
 let edit=false;
 const menu=document.querySelector(".mf-settings");
 
-document.addEventListener("keydown",e=>{
-if(e.code==="F4"){
-edit=!edit;
-menu.style.display=edit?"flex":"none";
-if(!edit) save();
-}
+document.addEventListener("keydown", e => {
+    if (["INPUT","TEXTAREA"].includes(document.activeElement.tagName)) return;
+
+    if (e.code === "F4") {
+        edit = !edit;
+        document.querySelector(".mf-settings").style.display = edit ? "flex" : "none";
+        if (!edit) save();
+    }
 });
 
 let dragging=false;
