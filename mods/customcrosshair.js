@@ -1,4 +1,3 @@
-(function(){
 const crosshairPresets = {
     "default": { label: "Default", style: { backgroundColor: "#fff", border: "2px solid #111010", borderRadius: "70.5px", width: 1, height: 1 } },
     "mc": { label: "Minecraft", image: "https://media.discordapp.net/attachments/1471854668559683735/1480054794608709773/mccrosshair.png", style: { border: "none", borderRadius: "0", width: 16, height: 16 } },
@@ -135,4 +134,3 @@ options.querySelectorAll("li").forEach(li=>{
 document.addEventListener("click", e=>{ if(!dropdown.contains(e.target)) options.style.display="none"; });
 customInput.addEventListener("change", ()=>{ settings.customURL=customInput.value.trim(); applyCrosshair(); localStorage.setItem("mf-crosshair-settings",JSON.stringify(settings)); });
 sizeSlider.addEventListener("input", ()=>{ settings.size=parseFloat(sizeSlider.value); applyCrosshair(); localStorage.setItem("mf-crosshair-settings",JSON.stringify(settings)); });
-})();
