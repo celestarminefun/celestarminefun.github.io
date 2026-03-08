@@ -388,10 +388,6 @@ document.documentElement.style.setProperty(
   "--mf-border",
   settings.border ? settings.borderThickness+"vh solid "+settings.borderColour : "0vh solid transparent"
 );
-document.documentElement.style.setProperty(
-  "--mf-slider",
-  settings.borderColour
-);
 if(settings.arrows){
 document.querySelector('[data-key="KeyW"]').textContent="↑";
 document.querySelector('[data-key="KeyA"]').textContent="←";
