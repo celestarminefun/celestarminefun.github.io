@@ -1,4 +1,4 @@
-const STORAGE_KEY = "mf-modmenu-settings";
+    const STORAGE_KEY = "mf-modmenu-settings";
 
 const defaultData = {
     mods:{
@@ -28,6 +28,9 @@ const defaultData = {
     },
     hpHitColor: {
     color: "#ff0000"
+    },
+    keybinds:{
+        menu:"AltLeft"
     }
 };
 
@@ -39,6 +42,7 @@ data.chat = {...defaultData.chat, ...(data.chat || {})};
 data.keystrokes = {...(data.keystrokes || {})};
 data.thewar = {...(data.thewar || {})};
 data.hpHitColor = {...(data.hpHitColor || defaultData.hpHitColor)};
+data.keybinds = {...defaultData.keybinds, ...(data.keybinds || {})};
 
 function save(){
     localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
@@ -131,6 +135,11 @@ menu.innerHTML = `
         Better Chests
         </label>
         <button class="mod-settings" disabled>⚙</button>
+        </div>
+
+        <div class="mf-keybind-row">
+        <button id="mf-change-key">Change Menu Key</button>
+        <span id="mf-key-display">ALT</span>
         </div>
 
     </div>
@@ -414,6 +423,33 @@ gap:1vh;
     position:absolute;
 }
 
+.mf-keybind-row{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-top:1vh;
+}
+
+#mf-change-key{
+background:#222;
+border:0.2vh solid #444;
+color:white;
+border-radius:0.5vh;
+font-size:1.4vh;
+padding:0.4vh 0.8vh;
+cursor:pointer;
+outline: none;
+}
+
+#mf-change-key:hover{
+background:#333;
+}
+
+#mf-key-display{
+font-size:1.7vh;
+margin-right: 0.2vw
+}
+
 `;
 
 document.head.appendChild(style);
@@ -421,10 +457,12 @@ document.head.appendChild(style);
 let open = false;
 
 document.addEventListener("keydown", e => {
-    if (e.key === "Alt") {
+
+    if(e.code === data.keybinds.menu){
         open = !open;
         menu.style.display = open ? "block" : "none";
     }
+
 });
 
 document.querySelectorAll(".mf-mod").forEach(row=>{
@@ -482,6 +520,47 @@ if(mod==="thewar") buildTheWarSettings();
 if(mod==="hpHitColor") buildHpHitColorSettings()
 
 }
+/* ---------------- CHANGE KEYBIND ---------------- */
+
+const keyBtn = document.getElementById("mf-change-key");
+const keyDisplay = document.getElementById("mf-key-display");
+
+function formatKey(code){
+    return code
+        .replace("Key","")
+        .replace("Digit","")
+        .replace("Left","")
+        .replace("Right","");
+}
+
+keyDisplay.textContent = formatKey(data.keybinds.menu);
+
+let waitingKey = false;
+
+keyBtn.onclick = () => {
+    keyBtn.textContent = "Press a key...";
+    waitingKey = true;
+};
+
+document.addEventListener("keydown",e=>{
+
+    if(waitingKey){
+
+        e.preventDefault();
+
+        data.keybinds.menu = e.code;
+        updateHomeModTip();
+        save();
+
+        keyDisplay.textContent = formatKey(e.code);
+
+        keyBtn.textContent = "Change Menu Key";
+        waitingKey = false;
+
+        return;
+    }
+
+});
 
 /* ---------------- CROSSHAIR ---------------- */
 
@@ -1446,20 +1525,20 @@ clicks.push(Date.now());
 });
 
 function cpsStatsLoop(){
-if(!data.mods.cps){
-if(cpsDiv) cpsDiv.remove();
-requestAnimationFrame(cpsLoop);
-return;
-}
+    if(!data.mods.cps){
+        if(cpsDiv) cpsDiv.remove();
+        requestAnimationFrame(cpsStatsLoop);
+        return;
+    }
 
-const now=Date.now();
-clicks=clicks.filter(t=>now-t<=1000);
+    const now = Date.now();
+    clicks = clicks.filter(t => now - t <= 1000);
 
-if(cpsDiv){
-cpsDiv.querySelector(".cps-value").textContent=clicks.length;
-}
-requestAnimationFrame(cpsStatsLoop);
+    if(cpsDiv){
+        cpsDiv.querySelector(".cps-value").textContent = clicks.length;
+    }
 
+    requestAnimationFrame(cpsStatsLoop);
 }
 
 requestAnimationFrame(cpsStatsLoop);
@@ -1713,25 +1792,32 @@ function updateHomeModTip() {
     const home = document.querySelector(".home");
     let tip = document.getElementById("mf-home-tip");
 
-    if (home && !tip) {
-        tip = document.createElement("div");
-        tip.id = "mf-home-tip";
-        tip.textContent = "Press ALT for Celestar Mod Menu | dsc.gg/celestar";
+    if (home) {
 
-        tip.style.position = "fixed";
-        tip.style.bottom = "2vh";
-        tip.style.left = "50%";
-        tip.style.transform = "translateX(-50%)";
-        tip.style.padding = "0.5vh 1vh";
-        tip.style.backgroundColor = "rgba(20,20,20,0.8)";
-        tip.style.color = "#fff";
-        tip.style.fontFamily = "Roboto, Arial";
-        tip.style.fontSize = "1.6vh";
-        tip.style.borderRadius = "0.5vh";
-        tip.style.zIndex = "999999";
+        if (!tip) {
+            tip = document.createElement("div");
+            tip.id = "mf-home-tip";
 
-        document.body.appendChild(tip);
-    } else if (!home && tip) {
+            tip.style.position = "fixed";
+            tip.style.bottom = "2vh";
+            tip.style.left = "50%";
+            tip.style.transform = "translateX(-50%)";
+            tip.style.padding = "0.5vh 1vh";
+            tip.style.backgroundColor = "rgba(20,20,20,0.8)";
+            tip.style.color = "#fff";
+            tip.style.fontFamily = "Roboto, Arial";
+            tip.style.fontSize = "1.6vh";
+            tip.style.borderRadius = "0.5vh";
+            tip.style.zIndex = "999999";
+
+            document.body.appendChild(tip);
+        }
+
+        // 🔹 ALWAYS update the text
+        const keyName = formatKey(data.keybinds.menu);
+        tip.textContent = `Press ${keyName} for Celestar Mod Menu | dsc.gg/celestar`;
+
+    } else if (tip) {
         tip.remove();
     }
 }
