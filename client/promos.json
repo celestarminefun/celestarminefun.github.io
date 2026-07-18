@@ -1,0 +1,16 @@
+[
+  {
+    "image": "https://celestarminefun.github.io/img/gaf.png",
+    "title": "Play Grow A Farm",
+    "subtitle": "Celestar's newest custom game!",
+    "url": "https://minefun.io/custom-games/6a33a9ca020e2ac626d8d0b3",
+    "external": false
+  },
+  {
+    "image": "https://celestarminefun.github.io/img/celestar-client.webp",
+    "title": "Celestar Client v1.0.0",
+    "subtitle": "See the update logs!",
+    "url": "https://github.com/celestarminefun/celestar-client/releases",
+    "external": true
+  }
+]
