@@ -7,10 +7,10 @@
     "external": false
   },
   {
-    "image": "https://celestarminefun.github.io/img/celestar-client.webp",
-    "title": "Celestar Client v1.0.0",
+    "image": "https://celestarminefun.github.io/client/texturepacks/minecraft_by_glitchhunter/preview.png",
+    "title": "Celestar Client v1.0.1",
     "subtitle": "See the update logs!",
-    "url": "https://github.com/celestarminefun/celestar-client/releases",
+    "url": "https://github.com/celestarminefun/celestar-client/releases/tag/v1.0.1",
     "external": true
   }
 ]
