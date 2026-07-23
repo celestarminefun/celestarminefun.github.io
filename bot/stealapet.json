@@ -1,10 +1,14 @@
 {
   "Capy": {
     "earn": 1,
-    "price": 25
+    "price": 25,
+    "rarity": "Common",
+    "image": "https://celestarminefun.github.io/img/pets/capy.png"
   },
   "Nugget": {
     "earn": 2,
-    "price": 75
+    "price": 75,
+    "rarity": "Common",
+    "image": "https://celestarminefun.github.io/img/pets/nugget.png"
   }
 }
