@@ -10,5 +10,288 @@
     "price": 75,
     "rarity": "Common",
     "image": "https://celestarminefun.github.io/img/pets/nugget.png"
+  },
+  "Moo": {
+    "earn": 3,
+    "price": 100,
+    "rarity": "Common",
+    "image": "https://celestarminefun.github.io/img/pets/moo.png"
+  },
+  "Penny": {
+    "earn": 7,
+    "price": 100,
+    "rarity": "Common",
+    "image": "https://celestarminefun.github.io/img/pets/penny.png"
+  },
+  "Sheepy": {
+    "earn": 11,
+    "price": 1200,
+    "rarity": "Common",
+    "image": "https://celestarminefun.github.io/img/pets/sheepy.png"
+  },
+
+  "Loaf": {
+    "earn": 15,
+    "price": 2000,
+    "rarity": "Rare",
+    "image": "https://celestarminefun.github.io/img/pets/loaf.png"
+  },
+  "Froggy": {
+    "earn": 20,
+    "price": 2800,
+    "rarity": "Rare",
+    "image": "https://celestarminefun.github.io/img/pets/froggy.png"
+  },
+  "Hammy": {
+    "earn": 27,
+    "price": 3800,
+    "rarity": "Rare",
+    "image": "https://celestarminefun.github.io/img/pets/hammy.png"
+  },
+  "Mittens": {
+    "earn": 36,
+    "price": 5000,
+    "rarity": "Rare",
+    "image": "https://celestarminefun.github.io/img/pets/mittens.png"
+  },
+  "Polly": {
+    "earn": 47,
+    "price": 6500,
+    "rarity": "Rare",
+    "image": "https://celestarminefun.github.io/img/pets/polly.png"
+  },
+  "Waddles": {
+    "earn": 60,
+    "price": 8000,
+    "rarity": "Rare",
+    "image": "https://celestarminefun.github.io/img/pets/waddles.png"
+  },
+  "Finn": {
+    "earn": 75,
+    "price": 9700,
+    "rarity": "Rare",
+    "image": "https://celestarminefun.github.io/img/pets/finn.png"
+  },
+
+  "Nana": {
+    "earn": 75,
+    "price": 10000,
+    "rarity": "Epic",
+    "image": "https://celestarminefun.github.io/img/pets/nana.webp"
+  },
+  "Minefunik": {
+    "earn": 78,
+    "price": 10000,
+    "rarity": "Epic",
+    "image": "https://celestarminefun.github.io/img/pets/minefunik.png"
+  },
+  "Bibi": {
+    "earn": 98,
+    "price": 13000,
+    "rarity": "Epic",
+    "image": "https://celestarminefun.github.io/img/pets/bibi.png"
+  },
+  "Flutter": {
+    "earn": 125,
+    "price": 16500,
+    "rarity": "Epic",
+    "image": "https://celestarminefun.github.io/img/pets/flutter.png"
+  },
+  "Rudy": {
+    "earn": 155,
+    "price": 20500,
+    "rarity": "Epic",
+    "image": "https://celestarminefun.github.io/img/pets/rudy.png"
+  },
+  "Sparky": {
+    "earn": 185,
+    "price": 25000,
+    "rarity": "Epic",
+    "image": "https://celestarminefun.github.io/img/pets/sparky.png"
+  },
+  "Dotty": {
+    "earn": 215,
+    "price": 30000,
+    "rarity": "Epic",
+    "image": "https://celestarminefun.github.io/img/pets/dotty.png"
+  },
+  "Pega": {
+    "earn": 250,
+    "price": 35500,
+    "rarity": "Epic",
+    "image": "https://celestarminefun.github.io/img/pets/pega.png"
+  },
+  "Shroomy": {
+    "earn": 288,
+    "price": 41000,
+    "rarity": "Epic",
+    "image": "https://celestarminefun.github.io/img/pets/shroomy.png"
+  },
+  "Rex": {
+    "earn": 325,
+    "price": 47500,
+    "rarity": "Epic",
+    "image": "https://celestarminefun.github.io/img/pets/rex.png"
+  },
+
+  "Cosmo": {
+    "earn": 200,
+    "price": 35000,
+    "rarity": "Legendary",
+    "image": "https://celestarminefun.github.io/img/pets/cosmo.webp"
+  },
+  "Lantern": {
+    "earn": 320,
+    "price": 55000,
+    "rarity": "Legendary",
+    "image": "https://celestarminefun.github.io/img/pets/lantern.png"
+  },
+  "Goobler": {
+    "earn": 470,
+    "price": 80000,
+    "rarity": "Legendary",
+    "image": "https://celestarminefun.github.io/img/pets/goobler.png"
+  },
+  "Hina": {
+    "earn": 670,
+    "price": 115000,
+    "rarity": "Legendary",
+    "image": "https://celestarminefun.github.io/img/pets/hina.png"
+  },
+  "Ember": {
+    "earn": 880,
+    "price": 155000,
+    "rarity": "Legendary",
+    "image": "https://celestarminefun.github.io/img/pets/ember.png"
+  },
+  "Inky": {
+    "earn": 1100,
+    "price": 200000,
+    "rarity": "Legendary",
+    "image": "https://celestarminefun.github.io/img/pets/inky.png"
+  },
+  "Blaze": {
+    "earn": 1400,
+    "price": 250000,
+    "rarity": "Legendary",
+    "image": "https://celestarminefun.github.io/img/pets/blaze.png"
+  },
+
+  "Frosty": {
+    "earn": 1600,
+    "price": 300000,
+    "rarity": "Mythic",
+    "image": "https://celestarminefun.github.io/img/pets/frosty.png"
+  },
+  "Squish": {
+    "earn": 2000,
+    "price": 350000,
+    "rarity": "Mythic",
+    "image": "https://celestarminefun.github.io/img/pets/squish.png"
+  },
+  "Cinder": {
+    "earn": 3800,
+    "price": 700000,
+    "rarity": "Mythic",
+    "image": "https://celestarminefun.github.io/img/pets/cinder.png"
+  },
+  "Mochi": {
+    "earn": 6500,
+    "price": 1300000,
+    "rarity": "Mythic",
+    "image": "https://celestarminefun.github.io/img/pets/mochi.png"
+  },
+  "Iris": {
+    "earn": 9800,
+    "price": 2300000,
+    "rarity": "Mythic",
+    "image": "https://celestarminefun.github.io/img/pets/iris.png"
+  },
+
+  "Mini": {
+    "earn": 14000,
+    "price": 3700000,
+    "rarity": "Secret",
+    "image": "https://celestarminefun.github.io/img/pets/mini.png"
+  },
+  "Puffy": {
+    "earn": 18000,
+    "price": 5500000,
+    "rarity": "Secret",
+    "image": "https://celestarminefun.github.io/img/pets/puffy.png"
+  },
+  "Axie": {
+    "earn": 315000,
+    "price": 50000000,
+    "rarity": "Secret",
+    "image": "https://celestarminefun.github.io/img/pets/axie.webp"
+  },
+  "Hazel": {
+    "earn": 750000,
+    "price": 125000000,
+    "rarity": "Secret",
+    "image": "https://celestarminefun.github.io/img/pets/hazel.png"
+  },
+  "Brainy": {
+    "earn": 1500000,
+    "price": 250000000,
+    "rarity": "Secret",
+    "image": "https://celestarminefun.github.io/img/pets/brainy.webp"
+  },
+
+  "Jade": {
+    "earn": 6000000,
+    "price": 1000000000,
+    "rarity": "OG",
+    "image": "https://celestarminefun.github.io/img/pets/jade.png"
+  },
+  "Snowy": {
+    "earn": 28000000,
+    "price": 5000000000,
+    "rarity": "OG",
+    "image": "https://celestarminefun.github.io/img/pets/snowy.png"
+  },
+  "Honey": {
+    "earn": 120000000,
+    "price": 25000000000,
+    "rarity": "OG",
+    "image": "https://celestarminefun.github.io/img/pets/honey.webp"
+  },
+  "Sparkle": {
+    "earn": 300000000,
+    "price": 90000000000,
+    "rarity": "OG",
+    "image": "https://celestarminefun.github.io/img/pets/sparkle.png"
+  },
+  "Webby": {
+    "earn": 400000000,
+    "price": 400000000000,
+    "rarity": "OG",
+    "image": "https://celestarminefun.github.io/img/pets/webby.png"
+  },
+
+  "Darco": {
+    "earn": 1000000000,
+    "price": 1000000000000,
+    "rarity": "Illegal",
+    "image": "https://celestarminefun.github.io/img/pets/darco.webp"
+  },
+  "Lemon sharky": {
+    "earn": 25000000000,
+    "price": 25000000000000,
+    "rarity": "Illegal",
+    "image": "https://celestarminefun.github.io/img/pets/lemonsharky.png"
+  },
+  "Crystal turtle": {
+    "earn": 100000000000,
+    "price": 100000000000000,
+    "rarity": "Illegal",
+    "image": "https://celestarminefun.github.io/img/pets/crystalturtle.png"
+  },
+  "Impik": {
+    "earn": 500000000000,
+    "price": 500000000000000,
+    "rarity": "Illegal",
+    "image": "https://celestarminefun.github.io/img/pets/impik.png"
   }
 }
