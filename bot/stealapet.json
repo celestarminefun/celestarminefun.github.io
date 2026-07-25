@@ -293,5 +293,11 @@
     "price": 500000000000000,
     "rarity": "Illegal",
     "image": "https://celestarminefun.github.io/img/pets/impik.png"
-  }
+  },
+  "Something in the box": {
+    "earn": 2000000000000,
+    "price": 2000000000000000,
+    "rarity": "Illegal",
+    "image": "https://celestarminefun.github.io/img/pets/somethinginthebox.webp"
+  },
 }
