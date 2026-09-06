@@ -15,3 +15,4 @@
 // @connect      celestarminefun.github.io
 // @connect      minefun.io
 // @connect      sandbox.minefun.io
+// ==/UserScript==
