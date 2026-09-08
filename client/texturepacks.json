@@ -4,5 +4,11 @@
         "creator": "GlitchHunter",
         "preview": "https://celestarminefun.github.io/client/texturepacks/minecraft_by_glitchhunter/preview.png",
         "file": "https://celestarminefun.github.io/client/texturepacks/minecraft_by_glitchhunter/pack.txt"
+    },
+    {
+        "name": "Bloxd",
+        "creator": "Celestar",
+        "preview": "https://celestarminefun.github.io/client/texturepacks/bloxd/preview.png",
+        "file": "https://celestarminefun.github.io/client/texturepacks/bloxd/pack.txt"
     }
 ]
