@@ -7,7 +7,9 @@
 // @match        https://minefun.io/*
 // @match        https://sandbox.minefun.io/*
 // @run-at       document-start
-// @require      https://celestarminefun.github.io/celestar-mod-menu-v2.js
+// @updateURL    https://celestarminefun.github.io/celestar-mod-menu-v2.user.js
+// @downloadURL  https://celestarminefun.github.io/celestar-mod-menu-v2.user.js
+// @require      https://celestarminefun.github.io/celestar-mod-menu-v2.js?v=2.0.0
 // @grant        GM_setValue
 // @grant        GM_getValue
 // @grant        GM_xmlhttpRequest
