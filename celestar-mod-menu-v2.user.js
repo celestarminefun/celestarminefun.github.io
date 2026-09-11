@@ -9,7 +9,7 @@
 // @run-at       document-start
 // @updateURL    https://celestarminefun.github.io/celestar-mod-menu-v2.user.js
 // @downloadURL  https://celestarminefun.github.io/celestar-mod-menu-v2.user.js
-// @require      https://celestarminefun.github.io/celestar-mod-menu-v2.js?v=2.0.0
+// @require      https://celestarminefun.github.io/celestar-mod-menu-v2.js
 // @grant        GM_setValue
 // @grant        GM_getValue
 // @grant        GM_xmlhttpRequest
