@@ -396,3 +396,357 @@
     background: #c4c4c5 !important;
     border-color: #e4e4e4 #696969 #696969 #e4e4e4 !important;
 }
+
+#__cs_inv_manager_toolbar {
+    background: #c4c4c5 !important;
+    border: 3px solid !important;
+    border-color: #e4e4e4 #696969 #696969 #e4e4e4 !important;
+    outline: solid 3px #000 !important;
+    border-radius: 4px !important;
+}
+
+#__cs_creative_search_bar {
+    background: #c4c4c5 !important;
+    top: -3px !important
+}
+
+#__cs_creative_search_bar .__cs_creative_search_input_wrap {
+    background: #8b8b8b !important;
+    border-radius: 0px !important;
+    border: 3.5px solid !important;
+    border-color: #575757 #fefefe #fefefe #575757 !important;
+}
+
+#__cs_creative_search_input::placeholder,
+#__cs_inv_search_input::placeholder {
+    opacity: 0 !important;
+}
+
+.__cs_inv_tool_search {
+    background: #8b8b8b !important;
+    border-radius: 0px !important;
+    border: 3.5px solid !important;
+    border-color: #575757 #fefefe #fefefe #575757 !important;
+}
+
+#__cs_inv_sort_btn {
+    background: #6c6c6c !important;
+    border-radius: 0px !important;
+    border: 3px solid !important;
+    border-color: #a2a2a3 #525353 #525353 #a2a2a3 !important;
+    box-shadow: none !important;
+    outline: #000 2px solid !important
+}
+
+#__cs_creative_search_input,
+#__cs_inv_search_input {
+    color: #fff !important;
+}
+
+.player-list-wrapper.bg-modal-cont {
+    background: transparent !important;
+    justify-content: start !important;
+    align-items: center !important;
+    transform: scale(0.5);
+    margin-top: -24vh !important;
+}
+
+.player-list-content {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.player-list-content .header {
+    background: #00000082 !important;
+    border: none !important;
+    border-radius: 0 0 0 0 !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.player-list-content .header .name-mode {
+    font-size: 20px !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0) !important;
+}
+
+.player-list-content .header .online-label {
+    display: none !important;
+}
+
+.player-list-content .teams .team {
+    background: transparent !important;
+    border: none !important;
+    gap: 7.5px !important;
+}
+
+.player-list-content .teams .team .player {
+    background: #00000082 !important;
+}
+
+.player-list-content .teams .team .player .name {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0) !important;
+}
+
+.player-list-content .teams .team .player .avatar {
+    border-radius: 0px !important
+}
+
+.messages {
+    background: #000000a2 !important;
+    width: 500px !important;
+    padding: 5px 0 7px 0 !important;
+}
+
+.chat .input-wrapper {
+    gap: 10px !important
+}
+
+.chat .input-wrapper .input {
+    background: #00000099 !important;
+    border: none !important;
+    border-radius: 0px !important;
+    transition: none !important;
+    width: 400px !important;
+    margin-left: -9px !important;
+}
+
+.chat .input-wrapper .input.active-input {
+    width: 0px !important
+}
+
+.chat .input-wrapper .input.active-input~.base-btn.enter {
+    display: none !important;
+}
+
+.chat .input-wrapper .input:not(.active-input)~.base-btn.enter {
+    display: flex !important;
+}
+
+.chat .input-wrapper .input::placeholder {
+    opacity: 0 !important;
+}
+
+.message {
+    background: transparent !important;
+    font-size: 16px !important;
+}
+
+.message .text.color-4 {
+    color: #ffff55 !important
+}
+
+.message .name {
+    color: #fff
+}
+
+.messages .message .name:before {
+    content: "<"
+}
+
+.messages .message .name:after {
+    content: ">"
+}
+
+.base-btn.enter {
+    background: #00000099 !important;
+    border-radius: 0px !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    height: 22px !important;
+    margin-top: 3px !important;
+    padding: 7px 5px !important;
+    font-size: 20px !important;
+}
+
+.messages:not(:has(.message)) {
+    background: transparent !important;
+}
+
+#__cs_item_tooltip {
+    background: #1b101d !important;
+    border-radius: 3px !important;
+    border: solid 3px !important;
+    border-color: #270765 #1e0445 #1b033c #200647 !important;
+    box-shadow: none !important;
+    outline: #1b101d solid 1px !important;
+}
+
+.chat .stats {
+    margin-left: -9px !important;
+}
+
+.coord-icon {
+    display: none !important;
+}
+
+.room.stats-item .room-symbol {
+    opacity: 0 !important;
+    font-size: 6px !important
+}
+
+.room.stats-item:before {
+    content: "Room " !important
+}
+
+.chat .stats .stats-item {
+    border-radius: 0px !important;
+    background: #00000099 !important
+}
+
+
+.hungry-bar.hunger-aligned {
+    background: transparent;
+    border: none !important;
+    box-shadow: none !important;
+    height: 36px
+}
+
+.hungry-bar.hunger-aligned {
+    position: relative;
+    image-rendering: pixelated;
+    overflow: hidden;
+}
+
+.hungry-bar.hunger-aligned::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAABKUlEQVR4AeyXDQ6CMAyFwdNw/9NwG31LhJitjtZttRnPtEHH6M/7XBMei+3zxHatY6ufWRvxq8yYiY0YBRu+nUSGS2xMUCNSTKdt2xato47i+fcaLv2t1kj/bAMjspGB4v4Ueioi4qGUDrVFKun5tIYYUj4st9lURNqkCPI0iQQBcZZBIqcUxi9pcuWOENIkS2u4pTMS0enkt6snEb+qhUxTNbKiwcL3fV9yx76wNhWRsCpbCiMRi1oee29BRDXJ0mTzUPwqxy2IXIkQ6j6JhMKBYqxEigGAGGs68C2ev58cvxE7vZOo3NoIYsc0NhKNC4nMSkScZmhWtf5t4h3T6/OKmKJF/WuJxdYW2UhNnX/cIxEP1aUhgLziACERKBPKSCQUDhQzDZEXAAAA//8aQi4LAAAABklEQVQDANy/pFpVNxVlAAAAAElFTkSuQmCC") !important;
+    background-size: 10% 100%;
+    background-repeat: repeat-x;
+    background-position: left center;
+
+    image-rendering: pixelated;
+    pointer-events: none;
+}
+
+.hungry-bar.hunger-aligned .hungry-value {
+    position: relative !important;
+    z-index: 1 !important;
+    box-sizing: border-box !important;
+    background: none !important;
+    background-color: transparent !important;
+    border: none !important;
+    overflow: hidden !important;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAABcUlEQVR4AeyYsU6CQQzHW2cnH8DXcfEdfAwnH8bE1TjoG5g4G+KKA4GwsQALy8efhDBcC1zhvqM5SvoPSem11/74msAN2V4dwnOF0HpmbaTezYyVohHjwHoPDyK9j9hY4BARsZ0+kVzTK/yp4BLntz68lbdDjZSv1mPGaKTH4Z6Uuiki6kOpPdSPXUea7jDDVO/PD6QJoVo9uM+zpoicNwonp4OIExC7a7RPZIZeU30xk6YVNlSq4f+QNBk22Wa74RZ51j6RvDn4iSpJ5KJdNdUIY5RCT3Cmerm/JU0f3wNKheOqaQtADTQ6myJi7N1neBDxxuUqiIhN9jtakKa/8ZxSDSZLylUJuldBpMSgquUIItVGnVnISkQsANRhbQG8/UwpVx3+ndGE3JvfJFmyNoLcPi0a8cYliLRKRN1maDbLz8zELLVnkyGtNK9fLXnTI55o5MiAqn8cRGqMnFkuANRlTUEEU3FlQcQVDlymGSJrAAAA//8FfGkbAAAABklEQVQDADeZHGn7RayoAAAAAElFTkSuQmCC") !important;
+    background-size: 38px 100% !important;
+    background-repeat: repeat !important;
+    background-position: left center !important;
+
+    image-rendering: pixelated;
+}
+
+.hungry-bar.hunger-aligned .hungry-value-text {
+    display: none !important;
+}
+
+.hp-bar {
+    margin-left: 6px !important
+}
+
+.hp-bar .hp-heart {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 38px !important;
+    height: 38px !important;
+    margin-bottom: 3px !important;
+    margin-left: -6px !important;
+
+    color: transparent;
+}
+
+.hp-bar .hp-heart:has(path[fill="#FF0A36"]) {
+    background-image: url("https://art.pixilart.com/699fb46a495e3d1.png");
+}
+
+.hp-bar .hp-heart:has(path[fill="#7E0017"]) {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA1ElEQVR4AeyUAQ6DMAhF6w7S+5+rF9n+NwNhEa2JTmK6QKDlt/68JnuV7d8b4ygxchHpuO+EdrFnwGov6YeBNQJ8szlrrSVKvMeskRrpuC+ab0VZYs3AMv1Dl8JAiHILANHa7NVC576XggBM3ReDwCAwCAwCJDDhb0iztVYksX9KyH2suFC/xZ4GUO+LlAYUEZHZ7OVkz7DHOb0TvYuUBJzDqxfpCdi3m/iekr9kZJ8VM3cO6zDSEwidnzU4SkDRErVNGNIZ+u44aqD74l7h8w3skfgAAAD//7xEPOQAAAAGSURBVAMAFRNoPTqJfFQAAAAASUVORK5CYII=");
+}
+
+.hp-bar .hp-heart path {
+    opacity: 0 !important;
+}
+
+
+.armor-indicator .armor-shield {
+    width: 38px;
+    height: 38px;
+    box-sizing: border-box;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAbUlEQVR4AZSOMRKAIAwEg/+303dY2Ghvx1u0t8LbKIxCJcORcFlCOrtXUkAKZXNHBpT247Rl3ai6qeTjAVmMUb4VkAfZo+DQPE/kLgBPdGQfKIxDL6vdjx+A2mrl/IP4v1ZumDv5XMzwlqAg2QUAAP//koG5iAAAAAZJREFUAwABkjkOGXXAKAAAAABJRU5ErkJggg==");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    image-rendering: pixelated;
+    margin-top: -10px !important;
+    content: "";
+    color: transparent;
+    font-size: 0;
+    text-indent: -9999px;
+    object-fit: none;
+    object-position: -9999px -9999px;
+}
+
+
+.armor-indicator .armor-points {
+    color: #000;
+    margin-top: -4px !important;
+    margin-left: 1px !important;
+}
+
+.key-prompt-wrapper .settings,
+.esc-key .img-ic,
+.key-prompt-wrapper img,
+.key-prompt-wrapper .camera,
+.key-prompt-wrapper.camera-key .img-ic.img-ic-anim,
+.key-prompt-wrapper.b-key .shop,
+.map-key .map-icon,
+.left-bottom .icon-map,
+.key-prompt-wrapper.r-key .achievements-icon {
+    box-sizing: border-box;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    image-rendering: pixelated;
+    font-size: 0;
+    object-position: -9999px -9999px;
+}
+
+.key-prompt-wrapper .settings,
+.esc-key .img-ic {
+    background-image: url("https://minecraft.wiki/images/Ore_UI_-_%22Wrench%22_Icon.png?912b4&format=original") !important;
+}
+
+.key-prompt-wrapper img {
+    background-image: url("https://minecraft.wiki/images/Ore_UI_-_%22Steve_and_Alex_Face_2%22_Icon.png?e171b&format=original");
+}
+
+.key-prompt-wrapper .camera,
+.key-prompt-wrapper.camera-key .img-ic.img-ic-anim {
+    background-image: url("https://minecraft.wiki/images/Ore_UI_-_%22Controller%22_Icon.png?21a7f&format=original") !important;
+}
+
+.key-prompt-wrapper.b-key .shop {
+    background-image: url("https://minecraft.wiki/images/Ore_UI_-_%22Marketplace%22_Icon.png?81380&format=original") !important;
+}
+
+.map-key .map-icon,
+.left-bottom .icon-map {
+    background-image: url("https://minecraft.wiki/images/Ore_UI_-_%22Overworld_Sun_Sunset%22_Icon.png?175c4&format=original") !important;
+}
+
+.key-prompt-wrapper.r-key .achievements-icon {
+    background-image: url("https://minecraft.wiki/images/Ore_UI_-_%22Enchanted_Book_with_Glowing%22_Icon.png?ede54&format=original") !important;
+}
+
+.key-prompt-wrapper .key,
+.map-key,
+.esc-key .key,
+.left-bottom .key.key-map-text {
+    font-size: 25px;
+    text-shadow: 2px 4px 0px rgba(0, 0, 0) !important;
+}
