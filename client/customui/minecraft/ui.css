@@ -597,31 +597,31 @@
 
 
 .hungry-bar.hunger-aligned {
-    background: transparent;
+    background: transparent !important;
     border: none !important;
     box-shadow: none !important;
     height: 36px
 }
 
 .hungry-bar.hunger-aligned {
-    position: relative;
-    image-rendering: pixelated;
-    overflow: hidden;
+    position: relative !important;
+    image-rendering: pixelated !important;
+    overflow: hidden !important;
 }
 
 .hungry-bar.hunger-aligned::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 0;
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
 
     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAABKUlEQVR4AeyXDQ6CMAyFwdNw/9NwG31LhJitjtZttRnPtEHH6M/7XBMei+3zxHatY6ufWRvxq8yYiY0YBRu+nUSGS2xMUCNSTKdt2xato47i+fcaLv2t1kj/bAMjspGB4v4Ueioi4qGUDrVFKun5tIYYUj4st9lURNqkCPI0iQQBcZZBIqcUxi9pcuWOENIkS2u4pTMS0enkt6snEb+qhUxTNbKiwcL3fV9yx76wNhWRsCpbCiMRi1oee29BRDXJ0mTzUPwqxy2IXIkQ6j6JhMKBYqxEigGAGGs68C2ev58cvxE7vZOo3NoIYsc0NhKNC4nMSkScZmhWtf5t4h3T6/OKmKJF/WuJxdYW2UhNnX/cIxEP1aUhgLziACERKBPKSCQUDhQzDZEXAAAA//8aQi4LAAAABklEQVQDANy/pFpVNxVlAAAAAElFTkSuQmCC") !important;
-    background-size: 10% 100%;
-    background-repeat: repeat-x;
-    background-position: left center;
+    background-size: 10% 100% !important;
+    background-repeat: repeat-x !important;
+    background-position: left center !important;
 
-    image-rendering: pixelated;
-    pointer-events: none;
+    image-rendering: pixelated !important;
+    pointer-events: none !important;
 }
 
 .hungry-bar.hunger-aligned .hungry-value {
@@ -637,7 +637,7 @@
     background-repeat: repeat !important;
     background-position: left center !important;
 
-    image-rendering: pixelated;
+    image-rendering: pixelated !important;
 }
 
 .hungry-bar.hunger-aligned .hungry-value-text {
