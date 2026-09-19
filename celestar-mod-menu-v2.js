@@ -299,6 +299,41 @@ function CM_toggleFavourite(id) {
     "client.compact": false,
   };
 
+  (function migrateFromGMStorage() {
+    const MIGRATION_FLAG = "__migratedFromGM";
+    try {
+      if (localStorage.getItem(CS_STORAGE_PREFIX + MIGRATION_FLAG) === "1") {
+        return;
+      }
+    } catch (e) {
+      return;
+    }
+
+    for (const key of Object.keys(DEFAULTS)) {
+      try {
+        const oldVal = GM_getValue(key, undefined);
+        if (oldVal === undefined) continue;
+        const lsKey = CS_STORAGE_PREFIX + key;
+        if (localStorage.getItem(lsKey) !== null) continue;
+        localStorage.setItem(lsKey, JSON.stringify(oldVal));
+      } catch (e) {}
+    }
+
+    for (const metaKey of ["__firstRunDone", "__cfgVer"]) {
+      try {
+        const oldVal = GM_getValue(metaKey, undefined);
+        if (oldVal === undefined) continue;
+        const lsKey = CS_STORAGE_PREFIX + metaKey;
+        if (localStorage.getItem(lsKey) !== null) continue;
+        localStorage.setItem(lsKey, JSON.stringify(oldVal));
+      } catch (e) {}
+    }
+
+    try {
+      localStorage.setItem(CS_STORAGE_PREFIX + MIGRATION_FLAG, "1");
+    } catch (e) {}
+  })();
+
   // -- CONFIG
   const _cfg = Object.create(null);
 
