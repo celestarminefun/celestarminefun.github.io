@@ -19,7 +19,7 @@
   },
   "Penny": {
     "earn": 7,
-    "price": 100,
+    "price": 500,
     "rarity": "Common",
     "image": "https://celestarminefun.github.io/img/pets/penny.png"
   },
@@ -29,7 +29,6 @@
     "rarity": "Common",
     "image": "https://celestarminefun.github.io/img/pets/sheepy.png"
   },
-
   "Loaf": {
     "earn": 15,
     "price": 2000,
@@ -72,7 +71,6 @@
     "rarity": "Rare",
     "image": "https://celestarminefun.github.io/img/pets/finn.png"
   },
-
   "Nana": {
     "earn": 75,
     "price": 10000,
@@ -133,7 +131,12 @@
     "rarity": "Epic",
     "image": "https://celestarminefun.github.io/img/pets/rex.png"
   },
-
+  "Ducky": {
+    "earn": 380,
+    "price": 59000,
+    "rarity": "Epic",
+    "image": "https://celestarminefun.github.io/img/pets/ducky.webp"
+  },
   "Cosmo": {
     "earn": 200,
     "price": 35000,
@@ -146,11 +149,11 @@
     "rarity": "Legendary",
     "image": "https://celestarminefun.github.io/img/pets/lantern.png"
   },
-  "Goobler": {
+  "Goober": {
     "earn": 470,
     "price": 80000,
     "rarity": "Legendary",
-    "image": "https://celestarminefun.github.io/img/pets/goobler.png"
+    "image": "https://celestarminefun.github.io/img/pets/goober.webp"
   },
   "Hina": {
     "earn": 670,
@@ -171,12 +174,17 @@
     "image": "https://celestarminefun.github.io/img/pets/inky.png"
   },
   "Blaze": {
-    "earn": 1400,
+    "earn": 1350,
     "price": 250000,
     "rarity": "Legendary",
     "image": "https://celestarminefun.github.io/img/pets/blaze.png"
   },
-
+  "Sadly": {
+    "earn": 1600,
+    "price": 320000,
+    "rarity": "Legendary",
+    "image": "https://celestarminefun.github.io/img/pets/sadly.webp"
+  },
   "Frosty": {
     "earn": 1600,
     "price": 300000,
@@ -207,7 +215,6 @@
     "rarity": "Mythic",
     "image": "https://celestarminefun.github.io/img/pets/iris.png"
   },
-
   "Mini": {
     "earn": 14000,
     "price": 3700000,
@@ -238,7 +245,6 @@
     "rarity": "Secret",
     "image": "https://celestarminefun.github.io/img/pets/brainy.webp"
   },
-
   "Jade": {
     "earn": 6000000,
     "price": 1000000000,
@@ -269,35 +275,40 @@
     "rarity": "OG",
     "image": "https://celestarminefun.github.io/img/pets/webby.png"
   },
-
   "Darco": {
-    "earn": 1000000000,
+    "earn": 833333333,
     "price": 1000000000000,
     "rarity": "Illegal",
     "image": "https://celestarminefun.github.io/img/pets/darco.webp"
   },
   "Lemon sharky": {
-    "earn": 25000000000,
+    "earn": 20833333333,
     "price": 25000000000000,
     "rarity": "Illegal",
     "image": "https://celestarminefun.github.io/img/pets/lemonsharky.png"
   },
   "Crystal turtle": {
-    "earn": 100000000000,
+    "earn": 83333333333,
     "price": 100000000000000,
     "rarity": "Illegal",
     "image": "https://celestarminefun.github.io/img/pets/crystalturtle.png"
   },
   "Impik": {
-    "earn": 500000000000,
+    "earn": 416666666667,
     "price": 500000000000000,
     "rarity": "Illegal",
     "image": "https://celestarminefun.github.io/img/pets/impik.png"
   },
   "Something in the box": {
-    "earn": 2000000000000,
+    "earn": 1666666666667,
     "price": 2000000000000000,
     "rarity": "Illegal",
     "image": "https://celestarminefun.github.io/img/pets/somethinginthebox.webp"
+  },
+  "Kevin": {
+    "earn": 4166666666667,
+    "price": 5000000000000000,
+    "rarity": "Illegal",
+    "image": "https://celestarminefun.github.io/img/pets/kevin.webp"
   }
 }
